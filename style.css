@@ -1,0 +1,83 @@
+body {
+    padding: 10px;
+    background-image: url("images/space.png");
+}
+
+h1, h3, h4, #currentChoice {
+    font-family: "American Typewriter";
+    color: #F0EBE3;
+}
+
+h5, p, ul, li, #crisisChoice {
+    font-family: Noteworthy;
+    color: #F0EBE3;
+}
+
+.body-ending {
+    padding: 100px;
+}
+
+.body-div {
+    border: #F0EBE3 dashed 2px;
+    padding: 50px;
+}
+
+.ending-headings {
+    text-align: center;
+}
+
+.section {
+    border: #F0EBE3 dashed 1px;
+    padding: 10px;
+}
+
+.endings {
+    display: none;
+}
+
+/* the sections that will only be shown when a crisis exists */
+.hiddenCrisis {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+#title {
+    text-align: center;
+}
+
+#currentInformation {
+    height: 275px;
+}
+
+#historyLog {
+    height: 325px;
+}
+
+#crisis {
+    height: 550px;
+}
+
+#additionalInfo {
+    height: 150px;
+}
+
+#planetIMG {
+    width: 500px;
+    height: 500px;
+}
+
+#crisisIMG {
+    width: 100px;
+    height: 100px;
+}
+
+#buttons {
+    text-align: center;
+    padding: 15px;
+}
+
+#nobel {
+    width: 300px;
+    height: 300px;
+}

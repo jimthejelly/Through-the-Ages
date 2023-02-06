@@ -1,0 +1,226 @@
+<!-- @author: Jimin Lee -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Through the Ages Gameplay</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="gameplay">
+        <br>
+        <h1 id="title">THROUGH THE AGES: ARMAGEDDON</h1>
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <!-- current information -->
+                    <div id="currentInformation" class="section">
+                        <h4>CURRENT TIME</h4>
+                        <p id="time">The very beginning<br>~4.5 billion years ago</p>
+
+                        <h4>TIME DESCRIPTION</h4>
+                        <p id="timeDescription">Welcome to the beginning of the world. This is the earth as far back as we know it.</p>
+                    </div>
+
+                    <br>
+
+                    <!-- history log -->
+                    <div id="historyLog" class="section">
+                        <h4>HISTORY LOG</h4>
+                        <ul id="history"></ul>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <!-- earth image -->
+                    <img src="images/planet0.png" id="planetIMG">
+
+                    <!-- time control buttons -->
+                    <div id="buttons">
+                        <button onclick="moveTime(-1)" id="backward">GO BACKWARD</button>
+                        <button onclick="moveTime(1)" id="forward">MOVE FORWARD</button>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <!-- crisis descriptions -->
+                    <div id="crisis" class="section">
+                        <h4>CURRENT CRISIS</h4>
+
+                        <!-- image that flashes when a crisis exists -->
+                        <div class="hiddenCrisis" id="crisisIMGdiv">
+                            <img src="images/crisis.png" alt="crisis.png" id="crisisIMG">
+                        </div>
+
+                        <!-- description of the crisis situation -->
+                        <p id="currentCrisis">There is no crisis as of now. Move forward in time to proceed.</p>
+
+                        <!-- different choices the user can pick to proceed with dealing with the crisis
+                            should  only be visible when there is a crisis to deal with -->
+                        <div class="hiddenCrisis" id="crisisBtn">
+                            <button onclick="crisisOption(0)" id="crisis0"></button><br><br>
+                            <button onclick="crisisOption(1)" id="crisis1"></button><br><br>
+
+                            <p id="currentChoice">Current Choice: <br><label id="crisisChoice"></label></p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!-- additional information -->
+                    <div id="additionalInfo" class="ending-headings">
+                        <!-- btn to reset simulation; takes user back to index.html -->
+                        <button onclick="reset()">RESET SIMULATION</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ending pages -->
+    <div class="body-ending">
+        <!-- ending1 -->
+        <div class="body-div endings" id="ending1">
+            <h1 class="ending-headings">ENDING #1: DEATH BY FAMINE</h1><br>
+
+            <h3>OUTCOME</h3>
+            <p>Oh no! It seems the civilization has died due to famine.
+                Make sure the people have the ability to make or access food!</p>
+
+            <br>
+
+            <div>
+                <h3>YOUR CHOICES</h3>
+                <ul id="end1"></ul>
+            </div>
+
+            <br>
+
+            <div class="ending-headings">
+                <button onclick="reset()" class="button">GO BACK?</button>
+            </div>
+        </div>
+
+        <!-- ending2 -->
+        <div class="body-div endings" id="ending2">
+            <h1 class="ending-headings">ENDING #2: DEATH BY DISEASE</h1><br>
+
+            <h3>OUTCOME</h3>
+            <p>Oh no! It seems the civilization has died due to disease.
+                Better stay inside, and stay protected!</p>
+
+            <br>
+
+            <div>
+                <h3>YOUR CHOICES</h3>
+                <ul id="end2"></ul>
+            </div>
+
+            <br>
+
+            <div class="ending-headings">
+                <button onclick="reset()" class="button">GO BACK?</button>
+            </div>
+        </div>
+
+        <!-- ending3 -->
+        <div class="body-div endings" id="ending3">
+            <h1 class="ending-headings">ENDING #3: YOU DIED?!</h1><br>
+
+            <h3>OUTCOME</h3>
+            <p>Whilst trying to save the past, it seems you got caught up in some historical business.
+                Perhaps you should stay out of some of it. We need you alive to save the world, after all...</p>
+
+            <br>
+
+            <div>
+                <h3>YOUR CHOICES</h3>
+                <ul id="end3"></ul>
+            </div>
+
+            <br>
+
+            <div class="ending-headings">
+                <button onclick="reset()" class="button">GO BACK?</button>
+            </div>
+        </div>
+
+        <!-- ending4 -->
+        <div class="body-div endings" id="ending4">
+            <h1 class="ending-headings">ENDING #4: DEATH BY WAR</h1><br>
+
+            <h3>OUTCOME</h3>
+            <p>Oh no! It seems the infighting led to the civilization self-destructing each other.
+                Known as Mutually Assured Destruction (MAD), try not to encourage them...</p>
+
+            <br>
+
+            <div>
+                <h3>YOUR CHOICES</h3>
+                <ul id="end4"></ul>
+            </div>
+
+            <br>
+
+            <div class="ending-headings">
+                <button onclick="reset()" class="button">GO BACK?</button>
+            </div>
+        </div>
+
+        <!-- ending5 -->
+        <div class="body-div endings" id="ending5">
+            <h1 class="ending-headings">ENDING #5: DEATH BY CLIMATE CHANGE</h1><br>
+
+            <h3>OUTCOME</h3>
+            <p>Oh no! It seems the civilization has died due to climate change.
+                Since this is what killed everyone off in 2050, please try your best to fulfill your duty
+                and make sure we don't repeat this mistake!</p>
+
+            <br>
+
+            <div>
+                <h3>YOUR CHOICES</h3>
+                <ul id="end5"></ul>
+            </div>
+
+            <br>
+
+            <div class="ending-headings">
+                <button onclick="reset()" class="button">GO BACK?</button>
+            </div>
+        </div>
+
+        <!-- ending6 -->
+        <div class="body-div endings" id="ending6">
+            <h1 class="ending-headings">ENDING #6: YOU DID IT!!</h1><br>
+
+            <h3>OUTCOME</h3>
+            <p>Congratulations! You have successfully led humanity back to the present time, and guided them to the right path!
+                You are awarded the Nobel Peace Price for your efforts.</p>
+
+            <img src="images/nobel.png" id="nobel">
+
+            <br>
+
+            <div>
+                <h3>YOUR CHOICES</h3>
+                <ul id="end6"></ul>
+            </div>
+
+            <br>
+
+            <div class="ending-headings">
+                <button onclick="reset()" class="button">GO BACK?</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
