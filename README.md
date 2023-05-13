@@ -1,8 +1,6 @@
 <h1>Through the Ages</h1>
 An interactive web game meant to show the history of humans over time.
 
-<hr>
-
 <h2>How to Play</h2>
 
 - Open index.html (should lead to main starting page)
@@ -11,16 +9,12 @@ An interactive web game meant to show the history of humans over time.
 - index.html (introduction + instructions page)
 - gameplay.html (actual game + ending page)
 
-<hr>
-
 <h2>User Interface</h2>
 <h3>Index.html -- Introduction page</h3>
 <img src="images/index-ss.png">
 
 <h3>gameplay.html -- Initial page layout</h3>
 <img src="images/gameplay-ss.png">
-
-<hr>
 
 <h2>Subsections of gameplay.html</h2>
 <h3>Current Information</h3>
@@ -57,8 +51,6 @@ An interactive web game meant to show the history of humans over time.
 </table>
 <p>Controls whether to move forward in time or move back. When a crisis occurs, the move forward time is disabled as to force the user to make a choice before proceeding forward in time.</p>
 
-<hr>
-
 <h2>Endings</h2>
 
 <h3>Ending #1: Death by Famine</h3>
@@ -78,8 +70,6 @@ An interactive web game meant to show the history of humans over time.
 
 <h3>Ending #6: You did it!!</h3>
 <img src="images/ending6.png">
-
-<hr>
 
 <h2>Created with:</h2>
 - HTML
