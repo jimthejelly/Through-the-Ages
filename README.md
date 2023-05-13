@@ -72,6 +72,7 @@ An interactive web game meant to show the history of humans over time.
 <img src="images/ending6.png">
 
 <h2>Created with:</h2>
+
 - HTML
 - CSS
 - JavaScript
