@@ -6,8 +6,10 @@ An interactive web game meant to show the history of humans over time.
 - Open index.html (should lead to main starting page)
 
 <h3>Paths & Pages</h3>
-- index.html (introduction + instructions page)
-- gameplay.html (actual game + ending page)
+<ul>
+    <li>index.html (introduction + instructions page)</li>
+    <li>gameplay.html (actual game + ending page)</li>
+</ul>
 
 <h2>User Interface</h2>
 <h3>Index.html -- Introduction page</h3>
